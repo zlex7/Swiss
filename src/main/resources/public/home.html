@@ -1,0 +1,27 @@
+<div class="content-container">
+
+  <div class="tournament-list-cont">
+
+
+    <table class="tournament-list">
+
+      <thead>
+
+      </thead>
+
+      <tbody>
+
+        <tr ng-repeat="tournament in $ctrl.tournamentLinks track by $index"
+          ng-class=""
+          ng-click="">
+          <td>{{tournament.name}}</td>
+       </tr>
+
+      </tbody>
+
+
+    </table>
+
+  </div>
+
+</div>

@@ -1,0 +1,230 @@
+@import "https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import "https://fonts.googleapis.com/css?family=Cabin";
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans" , "rawline", sans-serif;
+  position: relative;
+  min-height: 100%;
+  font-weight: 500; }
+
+body {
+  padding: 0 0 40px;
+  color: #272a33;
+  background: #ededef; }
+
+h1, h2, h3, h4 {
+  font-family: monospace;
+  font-weight: 300;
+  color: #444; }
+
+small {
+  color: #444; }
+
+a {
+  text-decoration: none;
+  color: #db3e00; }
+
+#header {
+  position: fixed;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #272a33;
+  border-bottom: 0px solid #db3e00;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.6); }
+
+#tab-container {
+  display: flex;
+  align-items: center;
+  height: 100%; }
+
+#menu li {
+  float: left; }
+
+#menu li a, #logout {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  font-size: 18px;
+  display: inline-block;
+  color: #db3e00;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  font-family: "Cabin";
+  font-weight: bold; }
+
+#menu li:hover a:hover, #logout:hover {
+  background-color: #db3e00;
+  color: #00334f; }
+
+#logo {
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 35px; }
+
+#chooseLanguage {
+  display: block; }
+
+#chooseLanguage li {
+  float: left; }
+
+#chooseLanguage button {
+  cursor: pointer;
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  opacity: 0.6;
+  border: 1px solid #222;
+  background-size: 100%; }
+
+#chooseLanguage button:hover {
+  opacity: 0.8; }
+
+#content {
+  text-align: center;
+  padding: 15px; }
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #f9a11b;
+  font-size: 14px; }
+
+nav ul, nav li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+/* Needlessly fancy menu hover effect */
+#menu {
+  display: block; }
+
+#menu li {
+  position: relative; }
+
+#logout:hover::after,
+#logout:focus::after,
+#menu li a:hover::after,
+#menu li a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px); }
+
+/* Very basic grid */
+.row {
+  width: 100%;
+  overflow: auto; }
+
+.row > * {
+  float: left; }
+
+.row-2 .col {
+  width: 49%; }
+
+.row-2 .col:nth-child(odd) {
+  margin: 0% 1% 0% 0%; }
+
+.row-2 .col:nth-child(even) {
+  margin: 0% 0% 0% 1%; }
+
+.row-3 .col {
+  width: 32%; }
+
+.row-3 .col:nth-child(3n+1) {
+  margin: 0% 1% 0% 0%; }
+
+.row-3 .col:nth-child(3n+2) {
+  margin: 0% 1% 0% 1%; }
+
+.row-3 .col:nth-child(3n+3) {
+  margin: 0% 0% 0% 1%; }
+
+@media screen and (max-width: 550px) {
+  .row .col:nth-child(n) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0; } }
+.col img {
+  display: block;
+  width: 100%; }
+
+/* Book related stuff */
+a.book {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px; }
+
+a.book:hover {
+  background: #e2e9f5; }
+
+a .bookCover {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+a .bookCover img {
+  border-radius: 5px;
+  min-height: 200px;
+  max-height: 200px;
+  width: auto; }
+
+.bookCover img {
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 100%; }
+
+/* Login Form */
+#loginForm {
+  max-width: 400px;
+  margin: 0 auto; }
+
+#loginForm label {
+  display: block;
+  width: 100%; }
+
+#loginForm input {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  width: 100%;
+  border-radius: 3px;
+  margin: 2px 0 20px 0; }
+
+#loginForm input[type="submit"] {
+  color: white;
+  background: #00334f;
+  border: 0;
+  cursor: pointer; }
+
+.notification {
+  padding: 10px;
+  background: #333;
+  color: white;
+  border-radius: 3px; }
+
+.good.notification {
+  background: #008900; }
+
+.bad.notification {
+  background: #bb0000; }
+
+/*# sourceMappingURL=main.css.map */

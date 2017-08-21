@@ -1,0 +1,58 @@
+#macro(mainLayout)
+<html>
+<head>
+    <title>$msg.get("GENERAL_TITLE")</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <nav id="header">
+        <a href="$WebPath.getINDEX()" id="logo">ST</a>
+        
+        <div id="tab-container">
+        
+	        <ul id="menu">
+	        	<li><a href="$WebPath.getINDEX()">$msg.get("GENERAL_HEAD_HOME")</a>
+	            <li><a href="$WebPath.getBOOKS()">$msg.get("GENERAL_HEAD_ALLTOURNEYS")</a></li>
+	            #if($currentUser)
+	                <li>
+	                    <form method="post" action="$WebPath.getLOGOUT()">
+	                        <button id="logout">$msg.get("GENERAL_NAV_LOGOUT")</button>
+	                    </form>
+	                </li>
+	            #else
+	                <li><a href="$WebPath.getLOGIN()"">$msg.get("GENERAL_NAV_LOGIN")</a></li>
+	            #end
+	        </ul>
+	        
+	        #**
+	        <ul id="chooseLanguage">
+	            <form>
+	                <li>
+	                    <button name="locale" value="de" style="background-image: url(/img/german.png);"></button>
+	                </li>
+	                <li>
+	                    <button name="locale" value="en" style="background-image: url(/img/english.png);"></button>
+	                </li>
+	            </form>
+	        </ul>
+	        *#
+	       
+	      </div>
+        
+    </nav>
+</header>
+
+
+    <div id="content">
+        $bodyContent
+    </div>
+
+<footer>
+    $msg.get("GENERAL_FOOTER")
+</footer>
+</body>
+</html>
+#end
