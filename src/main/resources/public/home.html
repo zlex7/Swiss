@@ -9,6 +9,10 @@
     </div>
 
 
+  <div class="left-create">
+
+    <div class="left-create-div">
+
     <div class="home-create-container">
 
 
@@ -20,41 +24,83 @@
         </div>
       </form>
 
-    </div>
-
-
-    <div class="home-create-container">
-
-      <p> 2. Pick a tournament format: &nbsp;</p>
-
-      <div class="btn-group button-cont">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            {{format}} <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu home-dropdown" role="menu">
-            <li ng-repeat="format in $ctrl.formats" ng-click="toggleFormat(format)">
-
-              <span ng-bind-html="format"></span>
-            </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="home-create-container">
-
-
+    </div><div class="home-create-container">
 
       <form class="form-inline">
 
-        <p> 3. Number of players: &nbsp;</p>
+        <p> 3. And the number of players: &nbsp;</p>
 
           <div class="form-group">
                 <input id="num-players" type="number" class="form-control form-inline" name="numPlayers">
           </div>
       </form>
 
+    </div><div class="home-create-container">
+
+      <form class="form-inline">
+
+        <p> 5. Public or private: &nbsp;</p>
+
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="rated">public</label>
+          <label class="radio-inline"><input type="radio" name="rated">private</label>
+        </div>
+
+      </form>
+
     </div>
+
+  </div><div class="right-create-div">
+
+  <div class="home-create-container">
+
+    <p> 2. Pick a tournament format: &nbsp;</p>
+
+    <div class="btn-group button-cont">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span ng-bind-html="$ctrl.tournament_format"></span> <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu home-dropdown" role="menu">
+          <li ng-repeat="format in $ctrl.formats" ng-click="$ctrl.toggleFormat(format)">
+
+            <span ng-bind-html="format"></span>
+          </li>
+      </ul>
+    </div>
+
+    </div><div class="home-create-container">
+
+      <form class="form-inline">
+
+        <p> 4. Should it be <a href="#">ELO</a> rated: &nbsp;</p>
+
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" name="rated">yes</label>
+          <label class="radio-inline"><input type="radio" name="rated">no</label>
+        </div>
+
+      </form>
+
+    </div><div class="home-create-container">
+      <form class="form-inline">
+
+        <form class="form-inline">
+          <p> 6. Lastly, a password: &nbsp;</p>
+          <div class="form-group">
+            <input type="text" class="form-control form-inline" id="password" placeholder="password">
+          </div>
+        </form>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  </div><div class="right-create">
+
+
+  </div>
 
     <!--
     <div class="category-div">

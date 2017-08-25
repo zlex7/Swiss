@@ -74,15 +74,17 @@ var app = angular.module('app', ['ui.router','ngSanitize']);
 
       controller: function() {
 
-        this.format="format";
+        this.tournament_format = "format";
 
         this.formats = ["<span class='glyphicon glyphicon-tower'></span> &nbsp;Swiss",
          "<span class='fa fa-twitter'></span> &nbsp;Round Robin",
-         "&nbsp;<b>{</b> &nbsp;&nbsp;Bracket (single elimination)",
-         "<b>{ }</b> &nbsp;Bracket (double elimination)"];
+         "&nbsp;<b>{</b> &nbsp;&nbsp;Bracket (single elim)",
+         "<b>{ }</b> &nbsp;Bracket (double elim)"];
 
         this.toggleFormat = function(format){
 
+          console.log(format);
+          this.tournament_format = format;
         }
 
       }
