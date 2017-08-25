@@ -1,27 +1,85 @@
-<div class="content-container">
+<div id="home-content" class="content-container">
 
-  <div class="tournament-list-cont">
+  <div id="home-row-1">
 
+    <div class="title">
 
-    <table class="tournament-list">
+      Try it out
 
-      <thead>
-
-      </thead>
-
-      <tbody>
-
-        <tr ng-repeat="tournament in $ctrl.tournamentLinks track by $index"
-          ng-class=""
-          ng-click="">
-          <td>{{tournament.name}}</td>
-       </tr>
-
-      </tbody>
+    </div>
 
 
-    </table>
+    <div class="home-create-container">
 
-  </div>
+
+
+      <form class="form-inline">
+        <p> 1. Choose a name: &nbsp;</p>
+        <div class="form-group">
+          <input type="text" class="form-control form-inline" id="usr" placeholder="name">
+        </div>
+      </form>
+
+    </div>
+
+
+    <div class="home-create-container">
+
+      <p> 2. Pick a tournament format: &nbsp;</p>
+
+      <div class="btn-group button-cont">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            {{format}} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu home-dropdown" role="menu">
+            <li ng-repeat="format in $ctrl.formats" ng-click="toggleFormat(format)">
+
+              <span ng-bind-html="format"></span>
+            </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="home-create-container">
+
+
+
+      <form class="form-inline">
+
+        <p> 3. Number of players: &nbsp;</p>
+
+          <div class="form-group">
+                <input id="num-players" type="number" class="form-control form-inline" name="numPlayers">
+          </div>
+      </form>
+
+    </div>
+
+    <!--
+    <div class="category-div">
+
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+
+      <h6>Board Games</h6>
+
+    </div>
+
+    <div class="category-div">
+
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+
+      <h6>Sports</h6>
+
+    </div>
+
+    <div class="category-div">
+
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+
+      <h6>Video Games</h6>
+
+    </div>
+  -->
 
 </div>

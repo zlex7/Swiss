@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router']);
+var app = angular.module('app', ['ui.router','ngSanitize']);
 
   app.config( function($stateProvider) {
 
@@ -51,28 +51,39 @@ var app = angular.module('app', ['ui.router']);
 
    });
 
-   angular.module('app').component('home', {
-
-      templateUrl: "home.html",
-
-      controller: function() {
-
-        console.log("home controller running");
-        
-        this.tournamentLinks = [{"name":"t1"},{"name":"t1"},
-        {"name":"t1"},{"name":"t1"},{"name":"t1"},{"name":"t1"}];
-
-
-      }
-   });
-
    angular.module('app').component('tournaments', {
 
       templateUrl: "tournaments.html",
 
       controller: function() {
 
+        console.log("tournament controller running");
 
+        this.tournamentLinks = [{"name":"put name here","numPlayers":23,"type":"Swiss","status":"Open"},
+      {"name":"put name here","numPlayers":233,"type":"Swiss23","status":"Open23111"},
+      {"name":"put name here","numPlayers":23112,"type":"Swiss3432","status":"Open33"},
+      {"name":"put name here","numPlayers":2113,"type":"Swiss333","status":"Open232"}];
+
+
+      }
+   });
+
+   angular.module('app').component('home', {
+
+      templateUrl: "home.html",
+
+      controller: function() {
+
+        this.format="format";
+
+        this.formats = ["<span class='glyphicon glyphicon-tower'></span> &nbsp;Swiss",
+         "<span class='fa fa-twitter'></span> &nbsp;Round Robin",
+         "&nbsp;<b>{</b> &nbsp;&nbsp;Bracket (single elimination)",
+         "<b>{ }</b> &nbsp;Bracket (double elimination)"];
+
+        this.toggleFormat = function(format){
+
+        }
 
       }
    });
@@ -137,7 +148,7 @@ var app = angular.module('app', ['ui.router']);
       console.log("controller");
 
 
-      $scope.headerLinks=["Home","Tournaments","Profile","FAQ"];
+      $scope.headerLinks=["Home","My Tournaments","Profile","FAQ"];
 
       $scope.urls = ["/home","/tournaments","/profile","/settings"]
 

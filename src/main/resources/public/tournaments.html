@@ -1,0 +1,68 @@
+<div id="tournaments-content" class="content-container">
+
+  <div id="tournaments-row-1">
+
+
+    <div class="intro-cont">
+
+      <span>New User?</span>
+
+      <p>
+
+      Tournify is a place to manage real life tournaments
+      from anywhere. Create a small and easy to manage tourney
+      in just a few clicks, or start a league and use ELO based ratings
+      to keep track of performance!
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <div id="tournaments-row-2">
+
+    <div class="tournament-list-cont">
+
+      <div class="table-header">
+
+        <i class="fa fa-trophy" aria-hidden="true"></i>
+        Tournaments
+
+      </div>
+
+
+      <table class="tournament-list">
+
+        <tbody>
+
+          <tr ng-repeat="tournament in $ctrl.tournamentLinks track by $index"
+            ng-class=""
+            ng-click="">
+            <td>{{tournament.name}}</td>
+            <td>{{tournament.type}}</td>
+            <td>{{tournament.status}}</td>
+            <td><i class="fa fa-user" aria-hidden="true"></i> {{tournament.numPlayers}}</td>
+         </tr>
+
+        </tbody>
+
+
+      </table>
+
+    </div><div class="right-tournaments-cont">
+
+
+      <div class="tournaments-buttons">
+
+        <a>New Tournament</a>
+
+        <a>Join Tournament</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
