@@ -74,17 +74,34 @@ var app = angular.module('app', ['ui.router','ngSanitize']);
 
       controller: function() {
 
+        this.tournamentLinks = [{"name":"chess bash","numPlayers":22,"type":"Swiss","status":"Open"},
+        {"name":"Super Smash Bros Dreamhack","numPlayers":1000,"type":"Single Elimination","status":"Closed"},
+        {"name":"CSGO 1v1 tourney","numPlayers":10,"type":"Round Robin","status":"Open"},
+        {"name":"League of Legends tourney","numPlayers":30,"type":"Double Elimination","status":"Open"}];
+
         this.tournament_format = "format";
 
         this.formats = ["<span class='glyphicon glyphicon-tower'></span> &nbsp;Swiss",
          "<span class='fa fa-twitter'></span> &nbsp;Round Robin",
-         "&nbsp;<b>{</b> &nbsp;&nbsp;Bracket (single elim)",
-         "<b>{ }</b> &nbsp;Bracket (double elim)"];
+         "&nbsp;<b>{</b> &nbsp;&nbsp;Single elimination",
+         "<b>{ }</b> &nbsp;Double elimination"];
 
         this.toggleFormat = function(format){
 
           console.log(format);
           this.tournament_format = format;
+        }
+
+        this.toggleNew = false;
+        this.tournamentClickNew = function(){
+
+          this.toggleNew = !this.toggleNew;
+        }
+
+        this.toggleJoin = false;
+        this.tournamentClickJoin = function(){
+
+          this.toggleJoin = !this.toggleJoin;
         }
 
       }

@@ -2,6 +2,57 @@
 
   <div id="home-row-1">
 
+
+    <div id="tournaments-row-2">
+
+      <div class="tournament-list-cont">
+
+        <div class="table-header">
+
+          <i class="fa fa-trophy" aria-hidden="true"></i>
+          Tournaments
+
+        </div>
+
+
+        <table class="tournament-list">
+
+          <tbody>
+
+            <tr ng-repeat="tournament in $ctrl.tournamentLinks track by $index"
+              ng-class=""
+              ng-click="">
+              <td><span class="tournament-list-name">{{tournament.name}}</span></td>
+              <td>{{tournament.type}}</td>
+              <td>{{tournament.status}}</td>
+              <td><i class="fa fa-user" aria-hidden="true"></i> {{tournament.numPlayers}}</td>
+           </tr>
+
+          </tbody>
+
+
+        </table>
+
+      </div><div class="right-tournaments-cont">
+
+
+        <div class="tournaments-buttons">
+
+          <a ng-click="$ctrl.tournamentClickNew()"
+          ng-class="{'tournament-buttons-active':$ctrl.toggleNew}">New Tournament</a>
+
+
+          <a ng-click="$ctrl.tournamentClickJoin()"
+          ng-class="{'tournament-buttons-active':$ctrl.toggleJoin}">Join Tournament</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="create-outer-cont">
+
     <div class="title">
 
       Try it out
@@ -39,7 +90,7 @@
 
       <form class="form-inline">
 
-        <p> 5. Public or private: &nbsp;</p>
+        <p> 5. Public or private? &nbsp;</p>
 
         <div class="form-group">
           <label class="radio-inline"><input type="radio" name="rated">public</label>
@@ -72,7 +123,7 @@
 
       <form class="form-inline">
 
-        <p> 4. Should it be <a href="#">ELO</a> rated: &nbsp;</p>
+        <p> 4. Should it be <a href="#">ELO</a> rated? &nbsp;</p>
 
         <div class="form-group">
           <label class="radio-inline"><input type="radio" name="rated">yes</label>
@@ -97,10 +148,24 @@
 
   </div>
 
-  </div><div class="right-create">
+  <div class="make-button-cont">
+
+    <div id="make-button-cont-2"><button type="button"
+      class="btn btn-default btn-md" id="make-btn">Make it!</button>
+
+                or
+
+                <a href="#"> advanced options </a>
+
+    </div>
+
+  </div>
+
+  </div>
 
 
   </div>
+
 
     <!--
     <div class="category-div">
